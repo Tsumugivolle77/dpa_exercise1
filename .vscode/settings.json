@@ -1,0 +1,9 @@
+{
+    "cmake.cmakePath": "/opt/homebrew/Cellar/cmake/3.30.3/bin/cmake",
+    // "cmake.generator": "Ninja",
+    "cmake.configureSettings": {
+      "CMAKE_C_COMPILER": "/opt/homebrew/Cellar/gcc/14.2.0_1/bin/gcc-14",
+      "CMAKE_CXX_COMPILER": "/opt/homebrew/Cellar/gcc/14.2.0_1/bin/g++-14",
+    }
+  }
+  
