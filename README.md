@@ -178,5 +178,4 @@ My implementation of parallel dot product between matrix and vector:
     printf("Matrix-vector product = [%f, %f]\n", res2[0], res2[1]);
 ```
 
-Each row of the resulting vector is calculated in the same way with vector dot product, thus having a time complexity of $O(\log n)$. In the reduction phase, we still can reduce the results in parallel, which results in a $O(\log n)$ time complexity. What is different is that we need $n\cdot n$ processors for the reduction phase.
-$$T(n)=O(\log n).$$
+Each row of the resulting vector is calculated in the same way with vector dot product, thus having a time complexity of $O(\log n)$. In the reduction phase, we still can reduce the results in parallel, which results in a $O(\log n)$ time complexity. What is different is that we need $n\cdot n$ processors for the reduction phase. Hence, $$T(n)=O(\log n).$$
