@@ -95,7 +95,17 @@ MPI_Comm_size(MPI_COMM_WORLD, &size);
 
 Similarly, we assign a random seed for each thread and use `rand_r()` for random number generation. We collect statistics respectively for each thread,
 ```cpp
+    local_points = num_points / size;
 
+    unsigned int seed = time(NULL) + rank;
+
+    for (long long int i = 0; i < local_points; i++) {
+        double x = (double)rand_r(&seed) / RAND_MAX;
+        double y = (double)rand_r(&seed) / RAND_MAX;
+        if (x*x + y*y <= 1.0) {
+            local_in_circle++;
+        }
+    }
 ```
 and reduce after all the jobs are done.
 ```cpp
